@@ -3,6 +3,11 @@
 ## Requirements:
  - gmake
  - clang50++ or gcc6++
+ - libcurl
+
+```
+pkg install gmake gcc6 curl
+```
 
 ## Uses 2 compile stages
 
@@ -25,3 +30,4 @@ git clone https://github.com/dkgroot/dragonflybsd_dmd_port.git
 cd dragonflybsd_dmd_port
 ./compile.sh
 ```
+

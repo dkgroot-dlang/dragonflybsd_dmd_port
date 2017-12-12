@@ -1,0 +1,10 @@
+diff --git a/test/single-file-sdl-default-name.sh b/test/single-file-sdl-default-name.sh
+index 1c61540..ab2ba8b 100755
+--- a/test/single-file-sdl-default-name.sh
++++ b/test/single-file-sdl-default-name.sh
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/usr/bin/env bash
+ set -e
+ cd ${CURR_DIR}
+ rm -f single-file-sdl-default-name
