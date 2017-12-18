@@ -31,7 +31,7 @@ bootstrap() {
                             echo "-----------------------------------------------------------------------------------------------------"
                             echo "running: $MAKE -f posix.mak MODEL=${MODEL} HOST_CSS=g++ $*"
                             echo "-----------------------------------------------------------------------------------------------------"
-                            $MAKE -f posix.mak MODEL=${MODEL} HOST_CSS=g++ HOST_$*
+                            $MAKE -f posix.mak MODEL=${MODEL} HOST_CSS=g++ $*
                     popd
             done
     popd
@@ -44,9 +44,9 @@ master() {
     echo "Running ${CURSTAGE} Compilation (NCPU:$NCPU / OS:$OS / MODEL:$MODEL)..."
     [ ! -d ${CURSTAGE} ] && mkdir ${CURSTAGE}
     pushd ${CURSTAGE}
-            [ ! -d dmd ] && git clone -b ${CURSTAGE} https://github.com/dlang/dmd.git
-            [ ! -d druntime ] && git clone -b ${CURSTAGE} https://github.com/dlang/druntime.git
-            [ ! -d phobos ] && git clone -b ${CURSTAGE} https://github.com/dlang/phobos.git
+            [ ! -d dmd ] && git clone -b dragonflybsd-master https://github.com/dlang/dmd.git
+            [ ! -d druntime ] && git clone -b dragonflybsd-master https://github.com/dlang/druntime.git
+            [ ! -d phobos ] && git clone -b dragonflybsd-master https://github.com/dlang/phobos.git
             export HOST_DMD=${DMD_BASEDIR}/bootstrap/install/${OS}/bin${MODEL}/dmd
             pushd dmd
                     echo "-----------------------------------------------------------------------------------------------------"
