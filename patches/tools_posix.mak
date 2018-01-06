@@ -35,7 +35,8 @@ endif
 # default include/link paths, override by setting DFLAGS (e.g. make -f posix.mak DFLAGS=-I/foo)
 DFLAGS = -I$(DRUNTIME_PATH)/import -I$(PHOBOS_PATH) \
 		 -L-L$(PHOBOS_PATH)/generated/$(OS)/$(DEBUG)/$(MODEL) $(MODEL_FLAG)
-DFLAGS += -w -de
+#DFLAGS += -w -de
+DFLAGS += -w -dw
 
 ifeq (dragonflybsd,$(OS))
         DFLAGS += -L-L/usr/local/lib
